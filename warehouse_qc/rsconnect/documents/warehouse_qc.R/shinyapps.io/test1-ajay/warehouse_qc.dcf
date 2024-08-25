@@ -1,0 +1,12 @@
+name: warehouse_qc
+title: warehouse_qc
+username: test1-ajay
+account: test1-ajay
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12516144
+bundleId: 9023325
+url: https://test1-ajay.shinyapps.io/warehouse_qc/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

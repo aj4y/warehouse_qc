@@ -1,6 +1,0 @@
-name: "my-website"
-navbar:
-  title: ""
-  left:
-    - text: ""
-      href: index.html
