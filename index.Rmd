@@ -4,14 +4,13 @@ output: html_document
 runtime: shiny
 ---
 
-
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
                       warning = FALSE)
 library(tidyverse)
 library(scales)
+library(shiny)
 ```
 
 ## Plot supplier risk
@@ -96,4 +95,3 @@ plotOutput("warehouse_risk")
 
 
 ```
-
