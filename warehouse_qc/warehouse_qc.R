@@ -5,14 +5,14 @@ library(shiny)
 ui <- fluidPage(
 
     # Application title
-    titlePanel("Warehouse QC plan"),
+    titlePanel("Warehouse QC plan",windowTitle = "Created by: Ajay"),
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
         sidebarPanel(width = 3,
           fluidRow(
           column(12,
-                 h4(HTML("<u>Supplier inputs</u>")),
+                 h4(HTML("<u>Supplier inputs</u>"),":"),
           selectInput("sup_n_values", label = "Sample size:",
                       choices = seq(500, 1000, by = 100), selected = 100,width = '300px'),
           selectInput("sup_c_values", label = "Acceptance criterion:",
@@ -20,16 +20,19 @@ ui <- fluidPage(
           )
           ),
           br(),
-          br(),
+          hr(),
           fluidRow(
           column(12,
-                 h4(HTML('<u>Warehouse inputs</u>')),
+                 h4(HTML('<u>Warehouse inputs</u>'),':'),
           selectInput("wh_n_values", label = "Sample size:",
                       choices = seq(500, 1000, by = 100), selected = 100, width = '300px'),
           selectInput("wh_c_values", label = "Acceptance criterion:",
                       choices = seq(0,70,by= 10), selected = 50,width = '300px')
           )
-          )
+          ),
+          br(),
+          hr(),
+          p(HTML("<i>Created by:</i>"),a("Ajay Kalyankar",href="https://www.linkedin.com/in/ajaykalyankar/"))
         ),
 
         # Show a plot of the generated distribution
