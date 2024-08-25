@@ -5,7 +5,7 @@ library(shiny)
 ui <- fluidPage(
 
     # Application title
-    titlePanel("Warehouse QC plan",windowTitle = "Created by: Ajay"),
+    titlePanel("Warehouse QC plan",windowTitle = "Warehouse QC"),
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
@@ -32,7 +32,12 @@ ui <- fluidPage(
           ),
           br(),
           hr(),
-          p(HTML("<i>Created by:</i>"),a("Ajay Kalyankar",href="https://www.linkedin.com/in/ajaykalyankar/"))
+          p(HTML("<i>Created by: Ajay Kalyankar</>")),
+          p(
+            a(icon("linkedin", style = "font-size: 24px; color: #0e76a8;"), href = "https://www.linkedin.com/in/ajaykalyankar/", target = "_blank"),
+            a(icon("github", style = "font-size: 24px; color: black;"), href = "https://github.com/aj4y", target = "_blank"),
+            a(icon("twitter", style = "font-size: 24px; color: #1DA1F2;"), href = "https://x.com/aj4y", target = "_blank")
+            )
         ),
 
         # Show a plot of the generated distribution
