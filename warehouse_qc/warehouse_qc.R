@@ -33,10 +33,11 @@ ui <- fluidPage(
           br(),
           hr(),
           p(HTML("<i>Created by: Ajay Kalyankar</>")),
+          p(HTML("<i>Follow on -</>")),
           p(
-            a(icon("linkedin", style = "font-size: 24px; color: #0e76a8;"), href = "https://www.linkedin.com/in/ajaykalyankar/", target = "_blank"),
-            a(icon("github", style = "font-size: 24px; color: black;"), href = "https://github.com/aj4y", target = "_blank"),
-            a(icon("twitter", style = "font-size: 24px; color: #1DA1F2;"), href = "https://x.com/aj4y", target = "_blank")
+            a(icon("linkedin", style = "font-size: 24px; color: #0e76a8; margin-right: 15px"), href = "https://www.linkedin.com/in/ajaykalyankar/", target = "_blank"),
+            a(icon("github", style = "font-size: 24px; color: black; margin-right: 15px"), href = "https://github.com/aj4y", target = "_blank"),
+            a(icon("twitter", style = "font-size: 24px; color: #1DA1F2; margin-right: 15px"), href = "https://x.com/aj4y", target = "_blank")
             )
         ),
 
