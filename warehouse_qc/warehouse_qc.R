@@ -9,20 +9,33 @@ ui <- fluidPage(
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
-        sidebarPanel(
-          selectInput("sup_n_values", label = "Supplier - Sample size:",
-                      choices = seq(500, 1000, by = 100), selected = 100,width = '600px'),
-          selectInput("sup_c_values", label = "Supplier - Acceptance criterion:",
-                      choices = seq(0,70,by= 10), selected = 50,width = '600px'),
-          selectInput("wh_n_values", label = "Warehouse - Sample size:",
-                      choices = seq(500, 1000, by = 100), selected = 100),
-          selectInput("wh_c_values", label = "Warehouse - Acceptance criterion:",
-                      choices = seq(0,70,by= 10), selected = 50)
+        sidebarPanel(width = 3,
+          fluidRow(
+          column(12,
+                 h4(HTML("<u>Supplier inputs</u>")),
+          selectInput("sup_n_values", label = "Sample size:",
+                      choices = seq(500, 1000, by = 100), selected = 100,width = '300px'),
+          selectInput("sup_c_values", label = "Acceptance criterion:",
+                      choices = seq(0,70,by= 10), selected = 50,width = '300px')
+          )
+          ),
+          br(),
+          br(),
+          fluidRow(
+          column(12,
+                 h4(HTML('<u>Warehouse inputs</u>')),
+          selectInput("wh_n_values", label = "Sample size:",
+                      choices = seq(500, 1000, by = 100), selected = 100, width = '300px'),
+          selectInput("wh_c_values", label = "Acceptance criterion:",
+                      choices = seq(0,70,by= 10), selected = 50,width = '300px')
+          )
+          )
         ),
 
         # Show a plot of the generated distribution
         mainPanel(
           plotOutput("supplier_risk"),
+          br(),
           plotOutput("warehouse_risk")
         )
     )
